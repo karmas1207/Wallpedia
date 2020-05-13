@@ -96,7 +96,7 @@ p3 {
   color: white;
   font-family: "roboto-regular";
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.7em;
   text-align: center;
   display: block;
   margin: 0 auto;
@@ -130,13 +130,13 @@ p3 {
 
 .colors {
   border: none;
-  padding: 15px;
+  padding: 20px;
   width: 100%;
 }
 
 .colors:hover {
   border: none;
-  padding: 15px;
+  padding: 20px;
   width: 100%;
   cursor: pointer;
   border-right: 15px solid #171717;
@@ -172,6 +172,8 @@ div.gallery:hover {
   border: none;
   margin: 0;
   cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.4s;
 }
 
 div.gallery img {
@@ -269,6 +271,15 @@ section {
     text-align: center;
   }
 
+  .resolutions:hover {
+    border: none;
+    padding: 20px;
+    width: 100%;
+    cursor: pointer;
+    border-right: 15px solid #171717;
+    transition: 0.2s;
+  }
+
 .responsive {
   width: 100%;
   margin: 6px 0;
@@ -291,6 +302,16 @@ section {
     padding: 40px;
     width: 100%;
   }
+  .colors:hover {
+    border: none;
+    padding: 40px;
+    width: 100%;
+    cursor: pointer;
+    border-right: 15px solid #171717;
+    transition: 0.2s;
+  }
+
+
 }
 @media only screen and (max-width: 500px) {
   .menu {
