@@ -1,6 +1,7 @@
 body {
-  background-color: #f1f1f1;
+  background-color: #ebebeb;
   margin: auto;
+
 }
 
 header {
@@ -13,7 +14,6 @@ header {
 }
 
 section {
-  background-color: #ebebeb;
   height: 2000px;
   margin-left: 200px;
 }
@@ -59,8 +59,8 @@ p3 {
 }
 
 .logo {
-  left: 0;
-  padding: 50px;
+  padding: 45px 0 45px 0;
+  text-align: center;
 }
 
 .post {
@@ -74,11 +74,16 @@ p3 {
 }
 
 .content {
-  padding: 50px 0 0 50px;
-  color: #111111;
-  width: 97%;
+  padding: 10px 0 0 50px;
+  width: 98%;
 }
 
+.content h1 {
+  color: #171717;
+  font-size: 2em;
+  font-family: "timeless";
+  margin-left: 6px;
+}
 
 .menu {
   height: 100%;
@@ -141,13 +146,14 @@ p3 {
   cursor: pointer;
   border-right: 15px solid #171717;
   transition: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 .resolutions {
   border: none;
   padding: 10px;
   width: 100%;
-  background-color: #f4efe3;
+  background-color: #ebebeb;
   color: #171717;
   font-family: "libel";
   font-size: 1em;
@@ -161,6 +167,7 @@ p3 {
   cursor: pointer;
   border-right: 15px solid #171717;
   transition: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 
 div.gallery {
@@ -172,8 +179,9 @@ div.gallery:hover {
   border: none;
   margin: 0;
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.03);
   transition: 0.4s;
+  transition-timing-function: ease-in-out;
 }
 
 div.gallery img {
@@ -189,6 +197,76 @@ div.gallery img {
   padding: 5px;
   float: left;
   width: 50%;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 1;}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,1);
+  font-family: "roboto-regular";
+  font-size: 1,4em;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 1500px;
+  top: 0;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 20px 0;
+  height: 150px;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -250,6 +328,11 @@ div.gallery img {
   .menu a:link {
     font-size: 1.3em;
   }
+
+  .modal-content {
+    width: 100%;
+  }
+
 header {
   width: 65%;
   margin-left: 30%;
@@ -264,9 +347,6 @@ section {
     border: none;
     padding: 20px;
     width: 100%;
-    background-color: #f4efe3;
-    color: #171717;
-    font-family: "libel";
     font-size: 2em;
     text-align: center;
   }
