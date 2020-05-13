@@ -32,6 +32,24 @@ p2 {
   color: white;
 }
 
+p3 {
+  font-family: "roboto-regular";
+  font-size: 0.7em;
+  color: white;
+  text-align: center;
+}
+
+.resolution-list {
+  margin: 25px 0 10px 0;
+}
+
+.resolution-list p {
+  color: white;
+  font-family: "roboto-bold";
+  font-size: 1em;
+  text-align: center;
+}
+
 .image {
   height: 80%;
   width: 80%;
@@ -64,7 +82,7 @@ p2 {
 
 .menu {
   height: 100%;
-  width: 10%;
+  width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -74,17 +92,75 @@ p2 {
   padding-top: 20px;
 }
 
-.menu p {
+.menu a:link {
   color: white;
   font-family: "roboto-regular";
-  font-size: 1em;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu a:hover {
+  color: #c3675b;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu a:visited {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu a:active {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu p {
+  color: white;
+  font-family: "libel";
+  font-size: 1.4em;
   text-align: center;
 }
 
 .colors {
-  border: solid 1px #e5e5e5;
+  border: none;
   padding: 15px;
-  margin: 15px;
+  width: 100%;
+}
+
+.colors:hover {
+  border: none;
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
+  border-right: 15px solid #171717;
+  transition: 0.2s;
+}
+
+.resolutions {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  background-color: #f4efe3;
+  color: #171717;
+  font-family: "libel";
+  font-size: 1em;
+  text-align: center;
+}
+
+.resolutions:hover {
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border-right: 15px solid #171717;
+  transition: 0.2s;
 }
 
 div.gallery {
@@ -95,6 +171,7 @@ div.gallery {
 div.gallery:hover {
   border: none;
   margin: 0;
+  cursor: pointer;
 }
 
 div.gallery img {
@@ -109,9 +186,19 @@ div.gallery img {
 .responsive {
   padding: 5px;
   float: left;
-  width: 24.99999%;
+  width: 50%;
 }
 
+
+@font-face {
+  font-family: "platnomor";
+  src: url(platnomor.ttf);
+}
+
+@font-face {
+  font-family: "libel";
+  src: url(libel.ttf);
+}
 
 @font-face {
   font-family: "roboto-regular";
@@ -152,7 +239,15 @@ div.gallery img {
 .menu {
   width: 30%;
   }
-
+  .menu p {
+    color: white;
+    font-family: "libel";
+    font-size: 2.2em;
+    text-align: center;
+  }
+  .menu a:link {
+    font-size: 1.3em;
+  }
 header {
   width: 70%;
   margin-left: 30%;
@@ -163,8 +258,19 @@ section {
   margin-left: 30%;
   }
 
+  .resolutions {
+    border: none;
+    padding: 20px;
+    width: 100%;
+    background-color: #f4efe3;
+    color: #171717;
+    font-family: "libel";
+    font-size: 2em;
+    text-align: center;
+  }
+
 .responsive {
-  width: 49.99999%;
+  width: 100%;
   margin: 6px 0;
   }
   p1 {
@@ -181,14 +287,20 @@ section {
     color: white;
   }
   .colors {
-    border: solid 1px #e5e5e5;
-    padding: 25px;
-    margin: 15px;
+    border: none;
+    padding: 40px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 500px) {
   .menu {
     width: 40%;
+    }
+    .menu p {
+      color: white;
+      font-family: "libel";
+      font-size: 2.4em;
+      text-align: center;
     }
   header {
     width: 60%;
