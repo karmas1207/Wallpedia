@@ -1,7 +1,15 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ebebeb;
   margin: auto;
-
+  overflow: scroll;
 }
 
 header {
@@ -14,7 +22,7 @@ header {
 }
 
 section {
-  height: 2000px;
+  overflow: scroll;
   margin-left: 200px;
 }
 
@@ -37,6 +45,40 @@ p3 {
   font-size: 0.7em;
   color: white;
   text-align: center;
+}
+
+#loader {
+  background-color: #353b48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.loading {
+  display: none;
+  left: 54%;
+  bottom: 50px;
+  position: fixed;
+  transition: opacity .3s ease-in;
+}
+
+.circle {
+  background-color: #171717;
+  border-radius: 50%;
+  border: 2px #ebebeb solid;
+  margin: 3px;
+  height: 15px;
+  width: 15px;
+  animation: jump 0.4s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+  animation-delay: 0.2s;
 }
 
 .resolution-list {
@@ -80,7 +122,7 @@ p3 {
 
 .content h1 {
   color: #171717;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "timeless";
   margin-left: 6px;
 }
@@ -133,6 +175,14 @@ p3 {
   text-align: center;
 }
 
+.menu h1 {
+
+  color: white;
+  font-family: "roboto-thin";
+  font-size: 0.6em;
+  text-align: center;
+}
+
 .colors {
   border: none;
   padding: 20px;
@@ -171,8 +221,12 @@ p3 {
 }
 
 div.gallery {
+
   border: none;
   margin: 0;
+  -webkit-box-shadow: 0px 6px 28px -10px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 6px 28px -10px rgba(0,0,0,0.35);
+  box-shadow: 0px 6px 28px -10px rgba(0,0,0,0.35);
 }
 
 div.gallery:hover {
@@ -185,6 +239,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -247,9 +302,41 @@ div.gallery img {
   animation-duration: 0.6s;
 }
 
+#topBtn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 52%;
+  z-index: 5;
+  border: 2px rgba(0, 0, 0, 0) solid;
+  outline: none;
+  background-color: #ebebeb;
+  color: #171717;
+  cursor: pointer;
+  padding: 15px 30px 15px 30px;
+  border-radius: 4px;
+  font-size: 1em;
+  font-family: "roboto-regular";
+}
+
+#topBtn:hover {
+  transition: 0.4s;
+  border: 2px rgba(17, 17, 17, 0.5) solid;
+}
+
+
 @keyframes zoom {
   from {transform:scale(0)}
   to {transform:scale(1)}
+}
+
+@keyframes jump {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
 }
 
 .close {
@@ -316,6 +403,20 @@ div.gallery img {
 }
 
 @media screen and (max-width: 992px) and (min-width: 500px) {
+
+  #topBtn {
+    left: 55%;
+    font-size: 1.4em;
+  }
+
+  .loading {
+    display: none;
+    left: 60%;
+  }
+  .circle {
+    height: 25px;
+    width: 25px;
+  }
 .menu {
   width: 300px;
   }
