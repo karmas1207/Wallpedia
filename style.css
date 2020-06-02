@@ -2,6 +2,8 @@
     display: none;
 }
 
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,6 +12,12 @@ body {
   background-color: #ebebeb;
   margin: auto;
   overflow: scroll;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header {
@@ -58,7 +66,7 @@ p3 {
 .loading {
   display: none;
   left: 54%;
-  bottom: 50px;
+  bottom: 15px;
   position: fixed;
   transition: opacity .3s ease-in;
 }
@@ -85,7 +93,7 @@ p3 {
   margin: 25px 0 10px 0;
 }
 
-.resolution-list p {
+.resolution-list , .palette-list p {
   color: white;
   font-family: "roboto-bold";
   font-size: 1em;
@@ -116,8 +124,12 @@ p3 {
 }
 
 .content {
-  padding: 10px 0 0 50px;
+  padding: 5px 0 0 50px;
   width: 98%;
+}
+
+.allImages {
+  bottom: 0;
 }
 
 .content h1 {
@@ -176,10 +188,9 @@ p3 {
 }
 
 .menu h1 {
-
   color: white;
   font-family: "roboto-thin";
-  font-size: 0.6em;
+  font-size: 0.5em;
   text-align: center;
 }
 
@@ -241,17 +252,27 @@ div.gallery:hover {
 div.gallery img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.myImages-bonus {
+  object-fit: cover;
+  height: 50px;
+}
+
 .responsive {
   padding: 5px;
   float: left;
   width: 50%;
+}
+
+.responsive-bonus {
+  padding: 5px;
+  float: left;
+
 }
 
 #myImg {

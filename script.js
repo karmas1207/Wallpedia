@@ -22,6 +22,11 @@ async function getImg(){
               </div>
             </div>`
         }
+        document.getElementById("all-images").innerHTML += `<div class="responsive-bonus">
+          <div class="gallery">
+                <img id="myImg" class="myImages-bonus" src=${src}>
+          </div>
+        </div>`
 }
 
 
@@ -32,8 +37,8 @@ window.addEventListener('scroll', () => {
   const { scrollTop, scrollHeight, clientHeight}
   = document.documentElement;
 
-  if(clientHeight + scrollTop >= scrollHeight - 5) {
-    showLoading();
+  if(clientHeight + scrollTop >= scrollHeight - 15) {
+   showLoading();
   }
 });
 
@@ -62,4 +67,23 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+var modal = document.getElementById("myModal");
+var images = document.getElementsByClassName('allImages');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = 'To download - Right click and press "Save picture as.."';
+    document.getElementById("site").style.overflow = "hidden";
+  }
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+modal.style.display = "none";
+document.getElementById("site").style.overflow = "auto";
 }

@@ -58,7 +58,7 @@
     <section>
         <div class="content">
           <h1>All wallpapers.</h1>
-          <div id="all-images">
+          <div id="all-images" class="allImages">
         </div>
         <div id="loadingId" class="loading">
           <div class="circle"></div>
@@ -73,24 +73,7 @@
     </footer>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
-      var modal = document.getElementById("myModal");
-      var images = document.getElementsByClassName('myImages');
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-      for (var i = 0; i < images.length; i++) {
-        var img = images[i];
-        img.onclick = function(evt) {
-          modal.style.display = "block";
-          modalImg.src = this.src;
-          captionText.innerHTML = 'To download - Right click and press "Save picture as.."';
-          document.getElementById("site").style.overflow = "hidden";
-        }
-      }
-      var span = document.getElementsByClassName("close")[0];
-      span.onclick = function() {
-      modal.style.display = "none";
-      document.getElementById("site").style.overflow = "auto";
-      }
+      
     </script>
   </body>
 </html>
