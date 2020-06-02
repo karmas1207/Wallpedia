@@ -131,7 +131,7 @@ p3 {
   height: 100%;
   width: 200px;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: #171717;
@@ -303,25 +303,28 @@ div.gallery img {
 }
 
 #topBtn {
+  left: 0;
+  top: 0;
+  margin-left: 108px;
   display: none;
   position: fixed;
-  top: 20px;
-  left: 52%;
-  z-index: 5;
+  z-index: 2;
   border: 2px rgba(0, 0, 0, 0) solid;
   outline: none;
   background-color: #ebebeb;
   color: #171717;
   cursor: pointer;
-  padding: 15px 30px 15px 30px;
+  width: 100%;
+  height: 2.6em;
   border-radius: 4px;
-  font-size: 1em;
-  font-family: "roboto-regular";
+  font-size: 2em;
+  font-family: "roboto-bold";
 }
 
 #topBtn:hover {
   transition: 0.4s;
-  border: 2px rgba(17, 17, 17, 0.5) solid;
+  background-color: #171717;
+  color: #ebebeb;
 }
 
 
@@ -348,6 +351,7 @@ div.gallery img {
   font-weight: bold;
   transition: 0.3s;
 }
+
 
 .close:hover,
 .close:focus {
@@ -405,8 +409,8 @@ div.gallery img {
 @media screen and (max-width: 992px) and (min-width: 500px) {
 
   #topBtn {
-    left: 55%;
-    font-size: 1.4em;
+    left: 4%;
+    font-size: 2.5em;
   }
 
   .loading {
