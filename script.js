@@ -29,8 +29,6 @@ async function getImg(){
         </div>`
 }
 
-
-
 const loading = document.querySelector('.loading');
 
 window.addEventListener('scroll', () => {
@@ -52,8 +50,6 @@ function hideLoading() {
   document.getElementById("loadingId").style.display = "none";
 }
 
-
-
 mybutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
 
@@ -70,20 +66,35 @@ function topFunction() {
 }
 
 var modal = document.getElementById("myModal");
-var images = document.getElementsByClassName('allImages');
+var images = document.getElementsByClassName('myImages');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 for (var i = 0; i < images.length; i++) {
-  var img = images[i];
+var img = images[i];
   img.onclick = function() {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = 'To download - Right click and press "Save picture as.."';
     document.getElementById("site").style.overflow = "hidden";
+    mybutton.style.display = "none";
   }
 }
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
 modal.style.display = "none";
 document.getElementById("site").style.overflow = "auto";
+if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+  mybutton.style.display = "block";
+} else {
+  mybutton.style.display = "none";
+}
+}
+
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("colors");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "block";
+  }
+  document.getElementById(tabName).style.display = "block";
 }

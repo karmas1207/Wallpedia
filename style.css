@@ -139,6 +139,35 @@ p3 {
   margin-left: 6px;
 }
 
+a:link {
+  color: white;
+  font-family: "roboto-regular";
+  text-decoration: none;
+  font-size: 0.7em;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+a:hover {
+  color: #c3675b;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:active {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
 .menu {
   height: 100%;
   width: 200px;
@@ -198,6 +227,7 @@ p3 {
   border: none;
   padding: 20px;
   width: 100%;
+  transition: 0.2s;
 }
 
 .colors:hover {
