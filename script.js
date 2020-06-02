@@ -27,7 +27,10 @@ async function getImg(){
                 <img id="myImg" class="myImages-bonus" src=${src}>
           </div>
         </div>`
+
 }
+
+getImg();
 
 const loading = document.querySelector('.loading');
 
@@ -65,20 +68,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-var modal = document.getElementById("myModal");
-var images = document.getElementsByClassName('myImages');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-for (var i = 0; i < images.length; i++) {
-var img = images[i];
-  img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = 'To download - Right click and press "Save picture as.."';
-    document.getElementById("site").style.overflow = "hidden";
-    mybutton.style.display = "none";
-  }
-}
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
 modal.style.display = "none";
@@ -97,4 +86,35 @@ function openTab(tabName) {
     x[i].style.display = "block";
   }
   document.getElementById(tabName).style.display = "block";
+  document.getElementById("moreColors").style.display = "none";
+  document.getElementById("lessColors").style.display = "block";
 }
+
+function closeTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("colors");
+  for (i = 5; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "none";
+  document.getElementById("moreColors").style.display = "block";
+  document.getElementById("lessColors").style.display = "none";
+}
+
+var images = document.getElementsByClassName('myImages');
+var modal = document.getElementById("myModal");
+var images = document.getElementsByClassName('myImages');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+  for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+      img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = 'To download - Right click and press "Save picture as.."';
+      document.getElementById("site").style.overflow = "hidden";
+      mybutton.style.display = "none";
+    }
+  }
+console.log(images);
